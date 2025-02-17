@@ -1,0 +1,65 @@
+.colapsable-techstack {
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    justify-content: center;
+    position: relative;
+}
+
+.techstack-perim, .perim {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-content: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.techstack-perim {
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.techstack-icon, .icon {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.techstack-perim:hover {
+    transform: scale(1.2);
+}
+
+
+/*  Appearance effect */
+
+.hidden-icons {
+    background-color: red;
+
+}
+.hidden-icons, .perim {
+    position: absolute;
+    margin: 0;
+}
+
+
+.hidden-icons .perim,.icon {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.techstack-perim:hover ~ .hidden-icons .perim,.icon {
+    opacity: 1;
+}
+
+.techstack-perim:hover ~ .hidden-icons .perim:nth-child(1) {
+    transform: translateX(100px);
+}
+.techstack-perim:hover ~ .hidden-icons .perim:nth-child(2) {
+    transform: translateX(260px);
+}
+.techstack-perim:hover ~ .hidden-icons .perim:nth-child(3) {
+    transform: translateX(420px);
+}
