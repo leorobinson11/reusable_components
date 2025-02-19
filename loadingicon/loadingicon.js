@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./loadingicon.css"
 
 const Loadingicon = ({ radius=50,  dotRadius=4, numdots=12 }) => {
     const [pos, setPos] = useState(0);
