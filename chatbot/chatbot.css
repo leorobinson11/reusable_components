@@ -1,0 +1,144 @@
+
+.chatbot-container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    width: 900px;
+    height: 300px;
+}
+
+/* Robot */
+.icon-container {
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    height: min-content;
+    width: min-content;
+    transition: all 0.1s ease-in-out;
+}
+
+.icon-container:hover {
+    transform: scale(1.05);
+}
+
+
+.icon {
+    color: white;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Message Area */
+
+.message-area {
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 7px;
+    color: white;
+    overflow: hidden;
+    transform: translate(-100px, -25px);
+    /* Open close effect */ 
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+    transition: width 0.3s ease-in-out 0.3s, opacity 0.3s ease-in-out 0.3s, height 0.3s ease-in-out;
+}
+
+.message-area.open{
+    height: 400px;
+    width: 800px;
+    opacity: 1;
+
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, height 0.3s ease-in-out 0.3s;
+}
+
+
+
+
+
+/* textfield content */
+
+.input-container {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin: 30px;
+    width: 60%;
+}
+
+.input {
+    user-select: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.3rem;
+    color: white;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 12px;
+    padding-left: 20px;
+}
+
+.input:focus {
+    background-color: transparent; 
+}
+
+.send-icon {
+    font-size: 40px;
+    transform: translate(25px, 15px);
+}
+
+.send-icon-container:hover .send-icon {
+    color: rgb(172, 166, 166);
+}
+
+
+/* Messages */
+.chat {
+    background-color: rgb(20, 19, 19);
+    margin-block: 25px;
+    margin-inline: 30px;
+    height: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    overflow-y: scroll;
+}
+
+.usermessage {
+    user-select: none;
+    align-self: flex-end;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-block: 10px;
+    padding: 7px;
+    padding-inline: 10px;
+}
+
+.user-icon {
+    color: white;
+    margin-inline: 5px;
+    align-self: center;
+    transform: translateY(2px);
+}
+
+.aimessage {
+    user-select: none;
+    align-self: flex-start;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-block: 10px;
+    padding: 7px;
+    padding-inline: 10px;
+}
+
+.ai-icon {
+    color: white;
+    margin-inline: 5px;
+    align-self: center;
+    transform: translateY(2px);
+}
+
+
