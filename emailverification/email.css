@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+/* Email input */
+.email-container {
+    opacity: 1;
+    transition: all .8s ease-in-out;
+}
+
+.email-container.hidden {
+    opacity: 0;
+    transform: translateX(-350px);
+}
+
+.email-input, .code-input {
+    color: white;
+    background: none;
+    user-select: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 1.6rem;
+    padding: 10px;
+    text-align: center;
+}
+.input:focus {
+    background-color: transparent; 
+}
+
+/* code input */
+.code-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    transition: all .8s ease-in-out;
+}
+
+.code-container.hidden {
+    transform: translateX(350px);
+    opacity: 0;
+}
+
+.code-container:not(.hidden) {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.code-container.confirmed {
+    transform: translateX(-350px);
+    opacity: 0;
+}
+
+.code-input {
+    margin-inline: 10px;
+    width: 50px;
+    justify-content: space-between;
+}  
+
+/*  confirmation text */
+.confirmation-text {
+    position: absolute;
+    color: white;
+    padding: 0px;
+    width: max-content;
+    transform: translateX(370px);
+    opacity: 0;
+    transition: all .8s ease-in-out;
+}
+
+.confirmation-text.confirmed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.confirmation-text  h1 {
+    margin: 0;
+}
